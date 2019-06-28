@@ -1,0 +1,569 @@
+ \documentclass[xcolor=dvipsnames,table]{beamer}
+%o
+%e
+
+\usepackage{latexsym}
+\usepackage [ansinew]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{amssymb} %Este e o AMS paquete
+\usepackage{amsmath}
+\usepackage{stmaryrd}
+\usepackage{fancybox}
+\usepackage{datetime}
+\usepackage{enumitem}
+
+\usepackage[T1]{fontenc}
+
+%\usepackage{beamerthemesplit}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{url}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{acronym}
+\usepackage{array}
+\usepackage{colortbl}
+
+\newtheorem{definicao}{Definio}
+\newcommand{\tab}{\hspace*{2em}}
+
+\mode<presentation>
+{
+  %\definecolor{colortexto}{RGB}{153,100,0}
+  \definecolor{colortexto}{RGB}{0,0,0}
+  
+  % \setbeamersize{sidebar width left=0.5cm}
+  \setbeamertemplate{background canvas}[vertical shading][ bottom=white!10,top=white!10]
+  %   \setbeamercolor{title}{fg=colortitulo!80!black,bg=blue!20!white}
+  %   \setbeamercolor{title}{bg=colortitulo!20!black}
+  %   \setbeamercolor{background canvas}{bg=colortitulo}
+  %   \setbeamercolor{frametitle}{fg=red}
+  
+  \setbeamercolor{normal text}{fg=colortexto} 
+  
+  \usetheme{Warsaw}
+  %\logo{\includegraphics[width=2cm]{Images/ratonfuerte.jpg}}
+  
+  
+  %   \usefonttheme[onlysmall]{structurebold}
+  %   \usecolortheme{seahorse}
+  %  \usecolortheme[named={YellowOrange}]{structure}
+  %   \usecolortheme[named={Blue}]{structure}
+  %   \usecolortheme{crane}
+  %   \useoutertheme{default}
+}
+\setbeamertemplate{caption}[numbered]
+
+\title{{\it Peer Instruction} na Prática: \\Utilizando a Instrução pelos Colegas \\em sua sala de aula} 
+
+\author{
+  Esdras Lins Bispo Jr. \\ \url{bispojr@ufg.br}
+  } 
+ \institute{
+  XIV Semana de Computação \\SECOMP 2019 \\\url{http://gg.gg/secomp-2019}}
+\date{\textbf{28 de junho de 2019} }
+
+\logo{\includegraphics[width=2cm]{images/secomp-logo.png}}
+
+\begin{document}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+
+	\begin{frame}{Agenda}
+		\tableofcontents
+		%\tableofcontents[hideallsubsections]
+	\end{frame}
+	
+	\section{Introdução}
+	\begin{frame}{Professor}
+	\begin{columns}
+		\column{.4\textwidth}  		
+		\begin{center}
+			\includegraphics[height=.5\textheight]{images/eu.jpg}
+		\end{center}
+		\column{.6 \textwidth}  		
+		\begin{block}{Quem?}
+			\begin{center}
+				{\bf Esdras L. Bispo Jr.} \\ Recife, Pernambuco.
+			\end{center}
+		\end{block}
+		\begin{block}{Caminhada...}
+			\begin{center}
+				Sistemas de Informação {\bf [Graduação]} \\
+					Repr. Conhecimento (IA) {\bf [Mestrado]}\\
+				Jataí ACM SIGCSE {\it Chapter} {\bf [Chair]}
+			\end{center}
+		\end{block}	
+		\begin{block}{Linha de Pesquisa}
+			Educação de Computação
+		\end{block}
+	\end{columns}
+\end{frame}
+
+	\section{Sobre a Instrução pelo Colegas}
+	\begin{frame}{Constatações sobre a sala de aula} \pause
+		\begin{block}{Constatação 1}
+			Aulas expositivas podem ser cansativas, se longas.
+		\end{block} \pause
+	 	\begin{block}{Constatação 2}
+	 		Alunos tendem a ser pragmáticos quanto ao que se aprende na escola.
+	 	\end{block} \pause
+ 		\begin{block}{Constatação 3}
+ 			Os alunos também aprendem entre si.
+ 		\end{block} \pause
+ 		\begin{block}{Constatação 4}
+ 			Em exatas, costuma-se ensinar receitas ao invés de conceitos.
+ 		\end{block}
+\end{frame}
+	
+	\begin{frame}{Sobre a Instrução pelos Colegas}
+	\begin{columns}
+		\column{.4\textwidth}  		
+		\begin{center}
+			\includegraphics[height=.5\textheight]{images/mazur.jpg}
+		\end{center}
+		\column{.6 \textwidth}  		
+		\begin{block}{Quem?}
+			\begin{center}
+				{\bf Prof. Eric Mazur.} \\ Universidade de Harvard
+			\end{center}
+		\end{block}
+		\begin{block}{O que fez?}
+			\begin{center}
+				Idealizador da \\Instrução pelos Colegas (IpC)\\
+				{\it [Peer Instruction]}
+			\end{center}
+		\end{block}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Metodologia IpC}
+\begin{center}
+	\includegraphics[height=.7\textheight]{images/fluxo-ipc}
+\end{center}
+\end{frame}
+
+\section{Como utilizar a IpC?}
+\begin{frame}{Como utilizar a IpC?}
+\begin{block}{Sete passos}
+	\begin{itemize}[label=(1)]
+		\item[(1)] Identifique o objetivo e os conceitos associados;
+		\item[(2)] Prepare aulas expositivas a partir dos conceitos;
+		\item[(3)] Escolha o material de referência;
+		\item[(4)] Elabore as questões conceituais a partir dos objetivos;
+		\item[(5)] Escolha a tecnologia de coleta de votos;
+		\item[(6)] Aplique em sala de aula e avalie o impacto; e
+		\item[(7)] Divulgue a IpC e estimule seus colegas.
+	\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Como utilizar a IpC?}
+\begin{block}{Sete passos}
+	\begin{itemize}[label=(1)]
+		\item[(1)] Identifique o objetivo e os conceitos associados; {\color{brown} \bf [$\rightarrow$]}
+		\item[(2)] Prepare aulas expositivas a partir dos conceitos;
+		\item[(3)] Escolha o material de referência;
+		\item[(4)] Elabore as questões conceituais a partir dos objetivos;
+		\item[(5)] Escolha a tecnologia de coleta de votos;
+		\item[(6)] Aplique em sala de aula e avalie o impacto; e
+		\item[(7)] Divulgue a IpC e estimule seus colegas.
+	\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Passo 1: Identifique o objetivo e os conceitos associados}
+\begin{block}{Identifique o objetivo de aprendizagem}
+	\begin{itemize}[label=$\bullet$]
+		\item O que os alunos devem aprender?
+		\item Quais os propósitos desta aula?
+		\item A que servirá, em termos concretos, a minha prática docente?
+	\end{itemize}
+\end{block} \pause
+\begin{center}
+	\includegraphics[width=.7\textheight]{images/objetivo.png}
+\end{center}
+\end{frame}
+
+\begin{frame}{Passo 1: Identifique o objetivo e os conceitos associados}
+\begin{block}{Identifique os conteúdos associados aos objetivos}
+	\begin{itemize}[label=$\bullet$]
+		\item Quais conceitos estão associados a cada objetivo?
+		\item O que o aluno deve apropriar-se para que o objetivo seja alcançado?
+	\end{itemize}
+\end{block} \pause
+\begin{block}{Exemplo: Identificar grandezas mensuráveis no contexto diário}
+	Medida de
+	\begin{itemize}[label=$\bullet$]
+		\item comprimento, 
+		\item massa, e 
+		\item capacidade
+	\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Questão 1}
+\begin{block}{[Q1]}
+	``Raiz de Equação do 2º Grau'' está mais próximo da ideia de...
+\end{block}
+\begin{enumerate}[label=(\Alph*)]
+	\item Objetivo de Aprendizagem
+	\item Conceito
+	\item Propósito
+	\item Nenhuma das anteriores
+\end{enumerate}
+\end{frame}
+
+%======================================
+%	PASSO 2
+%======================================
+
+\begin{frame}{Como utilizar a IpC?}
+\begin{block}{Sete passos}
+	\begin{itemize}[label=(1)]
+		\item[(1)] Identifique o objetivo e os conceitos associados; {\color{blue} [OK]}
+		\item[(2)] Prepare aulas expositivas a partir dos conceitos; {\color{brown} \bf [$\rightarrow$]}
+		\item[(3)] Escolha o material de referência;
+		\item[(4)] Elabore as questões conceituais a partir dos objetivos;
+		\item[(5)] Escolha a tecnologia de coleta de votos;
+		\item[(6)] Aplique em sala de aula e avalie o impacto; e
+		\item[(7)] Divulgue a IpC e estimule seus colegas.
+	\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Passo 2: Prepare aulas expositivas a partir dos conceitos}
+\begin{center}
+	\includegraphics[height=.7\textheight]{images/fluxo-ipc}
+\end{center}
+\end{frame}
+
+\begin{frame}{Passo 2: Prepare aulas expositivas a partir dos conceitos}
+\begin{block}{Propósitos}
+	\begin{itemize}[label=$\bullet$]
+		\item Apresentar (ou revisitar) o conceito;
+		\item Ser breve; e
+		\item Dialogar com os alunos.
+	\end{itemize}
+\end{block} \pause
+\begin{exampleblock}{}
+	Exemplo: Conceito de Proposição
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Conceito de Proposição}
+\begin{block}{Proposição}
+	Todo o conjunto de palavras ou símbolos que exprimem um pensamento de sentido completo.
+\end{block} \pause
+\begin{block}{Características das Proposições}
+	\begin{itemize}[label=-] \pause
+		\item Afirmam fatos; e  \pause
+		\item Exprimem juízos.
+	\end{itemize}
+\end{block} \pause
+\begin{block}{Exemplos}
+	\begin{itemize}[label=-]
+		\item A Lua é um satélite da Terra.
+		\item Recife é a capital de Pernambuco.
+		\item $\pi > 5$
+		\item sen $\dfrac{\pi}{2} = 1$
+	\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Questão 2}
+\begin{block}{[Q2]}
+	Qual das seguintes declarações abaixo \underline{\bf não} é uma proposição?
+\end{block}
+\begin{enumerate}[label=(\Alph*)]
+	\item A UFJ é uma universidade.
+	\item Bolsonaro é o presidente do Brasil.
+	\item Qual horário o ônibus passará hoje?
+	\item Lula é o presidente do Brasil.
+\end{enumerate}
+\end{frame}
+
+%======================================
+%	PASSO 3
+%======================================
+
+\begin{frame}{Como utilizar a IpC?}
+\begin{block}{Sete passos}
+	\begin{itemize}[label=(1)]
+		\item[(1)] Identifique o objetivo e os conceitos associados; {\color{blue} [OK]}
+		\item[(2)] Prepare aulas expositivas a partir dos conceitos; {\color{blue} [OK]}
+		\item[(3)] Escolha o material de referência; {\color{brown} \bf [$\rightarrow$]}
+		\item[(4)] Elabore as questões conceituais a partir dos objetivos;
+		\item[(5)] Escolha a tecnologia de coleta de votos;
+		\item[(6)] Aplique em sala de aula e avalie o impacto; e
+		\item[(7)] Divulgue a IpC e estimule seus colegas.
+	\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Passo 3: Escolha o material de referência}
+\begin{center}
+	\includegraphics[height=.7\textheight]{images/fluxo-ipc}
+\end{center}
+\end{frame}
+
+\begin{frame}{Passo 3: Escolha o material de referência}
+\begin{block}{Propósitos}
+	Servir de referência
+	\begin{itemize}[label=$\bullet$]
+		\item para o docente (e.g. preparação da aula); e
+		\item para o aluno (e.g. leitura prévia).
+	\end{itemize}
+\end{block} \pause
+\begin{alertblock}{Mas... e os alunos leem o que nós pedimos?} \pause
+	Sugestão: Pequenos {\it quizz}es antes de cada aula.
+\end{alertblock}
+\end{frame}
+
+\begin{frame}{Passo 3: Escolha o material de referência}
+\begin{center}
+	\includegraphics[height=.7\textheight]{images/estudo-previo}
+\end{center}
+\end{frame}
+
+%======================================
+%	PASSO 4
+%======================================
+
+\begin{frame}{Como utilizar a IpC?}
+\begin{block}{Sete passos}
+	\begin{itemize}[label=(1)]
+		\item[(1)] Identifique o objetivo e os conceitos associados; {\color{blue} [OK]}
+		\item[(2)] Prepare aulas expositivas a partir dos conceitos; {\color{blue} [OK]}
+		\item[(3)] Escolha o material de referência; {\color{blue} [OK]}
+		\item[(4)] Elabore as questões conceituais a partir dos objetivos; {\color{brown} \bf [$\rightarrow$]}
+		\item[(5)] Escolha a tecnologia de coleta de votos;
+		\item[(6)] Aplique em sala de aula e avalie o impacto; e
+		\item[(7)] Divulgue a IpC e estimule seus colegas.
+	\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Passo 4: Elabore as questões conceituais dos objetivos}
+\begin{center}
+	\includegraphics[height=.7\textheight]{images/fluxo-ipc}
+\end{center}
+\end{frame}
+
+\begin{frame}{Passo 4: Elabore as questões conceituais dos objetivos}
+\begin{block}{Aspectos Importantes}
+	\begin{itemize}[label=$\bullet$]
+		\item Elabore a partir dos objetivos, e não dos conteúdos. \pause
+		\item Priorize sempre problemas que exijam pensamento crítico. \pause
+		\item Promova um ambiente favorável à discussão entre os colegas.
+	\end{itemize}
+\end{block}  \pause
+\begin{exampleblock}{}
+Exemplo: Conceito de Valor Lógico.
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Valor Lógico}
+\begin{block}{Notação}
+	O valor lógico de uma proposição simples $p$ indica-se por $V(p)$.
+\end{block} \pause
+\begin{block}{Assim...}
+	\begin{itemize}[label=-]
+		\item Se $p$ é verdadeira, então $V(p) = V$; \pause
+		\item Se $p$ é falsa, então $V(p) = F$.
+	\end{itemize}
+\end{block} \pause
+\begin{exampleblock}{Exemplos}
+	\begin{itemize}[label=-]
+		\item $p$: O Sol é verde.
+		\item $q$: Um hexágono tem 9 diagonais.
+		\item 2 é raiz da equação $x^2 + 3x -4 = 0$.
+	\end{itemize} \pause
+	
+	\begin{center}
+		$V(p) = F$, \ \ \ $V(q) = V$, e \ \ \ $V(r)= F$.
+	\end{center}
+	
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Questão 3}		
+\begin{block}{[Q3]}
+Se $V(p) = F$ e $p:$ ``O boné é mais caro do que o chapéu'', então é \underline{\bf impossível} afirmar que...
+\end{block}
+\begin{enumerate}[label=(\Alph*)]
+\item o boné custa o mesmo valor do chapéu.
+\item o boné custa R$\$$ $35,00$ e o chapéu custa R$\$$ $40,00$.
+\item o boné custa metade do preço do chapéu.
+\item o boné custa R$\$$ $15,00$ e o chapéu custa R$\$$ $10,00$.
+\end{enumerate}
+\end{frame}
+
+%======================================
+%	PASSO 5
+%======================================
+
+\begin{frame}{Como utilizar a IpC?}
+\begin{block}{Sete passos}
+	\begin{itemize}[label=(1)]
+		\item[(1)] Identifique o objetivo e os conceitos associados; {\color{blue} [OK]}
+		\item[(2)] Prepare aulas expositivas a partir dos conceitos; {\color{blue} [OK]}
+		\item[(3)] Escolha o material de referência; {\color{blue} [OK]}
+		\item[(4)] Elabore as questões conceituais a partir dos objetivos; {\color{blue} [OK]}
+		\item[(5)] Escolha a tecnologia de coleta de votos; {\color{brown} \bf [$\rightarrow$]}
+		\item[(6)] Aplique em sala de aula e avalie o impacto; e
+		\item[(7)] Divulgue a IpC e estimule seus colegas.
+	\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Passo 5: Escolha a tecnologia de coleta de votos}
+\begin{center}
+	\includegraphics[height=.7\textheight]{images/fluxo-ipc}
+\end{center}
+\end{frame}
+
+\begin{frame}{Passo 5: Escolha a tecnologia de coleta de votos}
+\begin{center}
+	\includegraphics[height=.7\textheight]{images/votacao-manual}
+	Votação Manual.
+\end{center}
+\end{frame}
+
+\begin{frame}{Passo 5: Escolha a tecnologia de coleta de votos}
+\begin{center}
+	\includegraphics[height=.7\textheight]{images/placa-clicker}
+	Cartão de Resposta e {\it Clicker}.
+\end{center}
+\end{frame}
+
+\begin{frame}{Passo 5: Escolha a tecnologia de coleta de votos}
+\begin{center}
+	\includegraphics[height=.7\textheight]{images/plickers.jpg} \ \ 
+	\includegraphics[height=.7\textheight]{images/plickers-results}
+	\\{\it Plicker}s (\url{www.plickers.com}).
+\end{center}
+\end{frame}
+
+\begin{frame}{Questão 4}		
+\begin{block}{[Q4]}
+	Devo escolher a tecnologia de coleta de votos, principalmente,...
+\end{block}
+\begin{enumerate}[label=(\Alph*)]
+	\item ao seu poder inovador.
+	\item à sua capacidade de envolver os alunos.
+	\item à sua capacidade de contar os votos de forma rápida.
+	\item à sua adaptação à realidade escolar.
+\end{enumerate}
+\end{frame}
+
+%======================================
+%	PASSO 6
+%======================================
+
+\begin{frame}{Como utilizar a IpC?}
+\begin{block}{Sete passos}
+	\begin{itemize}[label=(1)]
+		\item[(1)] Identifique o objetivo e os conceitos associados; {\color{blue} [OK]}
+		\item[(2)] Prepare aulas expositivas a partir dos conceitos; {\color{blue} [OK]}
+		\item[(3)] Escolha o material de referência; {\color{blue} [OK]}
+		\item[(4)] Elabore as questões conceituais a partir dos objetivos; {\color{blue} [OK]}
+		\item[(5)] Escolha a tecnologia de coleta de votos; {\color{blue} [OK]}
+		\item[(6)] Aplique em sala de aula e avalie o impacto; e {\color{brown} \bf [$\rightarrow$]}
+		\item[(7)] Divulgue a IpC e estimule seus colegas.
+	\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Passo 6: Aplique em sala de aula e avalie o impacto}
+\begin{center}
+	\includegraphics[height=.7\textheight]{images/fluxo-ipc}
+\end{center}
+\end{frame}
+
+\begin{frame}{Passo 6: Aplique em sala de aula e avalie o impacto}
+\begin{block}{Aspectos importantes}
+	\begin{itemize}[label=$\bullet$]
+		\item ``Sinta'' a dinâmica da sua turma. \pause
+		\item Meça a quantidade de questões adequada para a sua turma. \pause
+		\item Tenha cuidado no uso das respostas da IpC para fins de pontuação. \pause
+		\item Crie sempre um ambiente favorável à aprendizagem, e não o oposto. \pause
+		\item Planeje o momento da votação. \pause
+		\item Lembre-se que você está sempre em evolução na sua prática docente.
+	\end{itemize}
+\end{block} 
+\end{frame}
+
+\begin{frame}{Passo 6: Aplique em sala de aula e avalie o impacto}
+\begin{center}
+	\includegraphics[height=.5\textheight]{images/logica-percentagem-geral}
+\end{center}
+\end{frame}
+
+\begin{frame}{Passo 6: Aplique em sala de aula e avalie o impacto}
+\begin{center}
+	\includegraphics[height=.7\textheight]{images/discutir-sobre}
+\end{center}
+\end{frame}
+
+\begin{frame}{Passo 6: Aplique em sala de aula e avalie o impacto}
+\begin{center}
+	\includegraphics[height=.7\textheight]{images/recomendo-professores}
+\end{center}
+\end{frame}
+
+
+%======================================
+%	PASSO 7
+%======================================
+
+\begin{frame}{Como utilizar a IpC?}
+\begin{block}{Sete passos}
+	\begin{itemize}[label=(1)]
+		\item[(1)] Identifique o objetivo e os conceitos associados; {\color{blue} [OK]}
+		\item[(2)] Prepare aulas expositivas a partir dos conceitos; {\color{blue} [OK]}
+		\item[(3)] Escolha o material de referência; {\color{blue} [OK]}
+		\item[(4)] Elabore as questões conceituais a partir dos objetivos; {\color{blue} [OK]}
+		\item[(5)] Escolha a tecnologia de coleta de votos; {\color{blue} [OK]}
+		\item[(6)] Aplique em sala de aula e avalie o impacto; e {\color{blue} [OK]}
+		\item[(7)] Divulgue a IpC e estimule seus colegas. {\color{brown} \bf [$\rightarrow$]}
+	\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Passo 7: Divulgue a IpC e estimule seus colegas}
+\begin{center}
+	\includegraphics[height=.7\textheight]{images/divulgar}
+\end{center}
+\end{frame}
+
+\begin{frame}{Recursos}
+	\begin{block}{Artigo de referência (Português)}
+		\begin{itemize}
+			\item ARAUJO, I. S.; MAZUR, E. Instrução pelos colegas e ensino sob medida: uma proposta para o engajamento dos alunos no processo de ensino-aprendizagem de Física. {\bf Caderno brasileiro de ensino de física}. Florianópolis. Vol. 30, n. 2 (ago. 2013), p. 362-384, 2013.
+		\end{itemize}	
+	\end{block}
+	\begin{block}{Repositório deste Minicurso}
+		\url{http://gg.gg/secomp-2019}
+	\end{block}
+\end{frame}
+
+\begin{frame}{Créditos}
+\begin{block}{Imagem - Expectativas de Aprendizagem}
+	\begin{itemize}[label=$\bullet$]
+		\item Conquista da Matemática 3 (Giovanni Jr.)
+		\item Disponível em \url{https://issuu.com/editoraftd/docs/conquista3}.
+	\end{itemize}
+\end{block}
+\begin{block}{Imagem - Divulgue}
+	Disponível em {\small \url{http://www.13bits.com.br/o-que-voce-precisa-para-divulgar- sua-empresa-na-internet/}}
+\end{block}
+\end{frame}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+\end{document}
